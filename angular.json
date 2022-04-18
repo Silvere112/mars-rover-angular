@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "marsrover": "apps/marsrover",
+    "marsrover-e2e": "apps/marsrover-e2e"
+  }
+}

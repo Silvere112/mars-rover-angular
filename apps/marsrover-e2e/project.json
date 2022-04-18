@@ -1,0 +1,28 @@
+{
+  "root": "apps/marsrover-e2e",
+  "sourceRoot": "apps/marsrover-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/marsrover-e2e/cypress.json",
+        "devServerTarget": "marsrover:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "marsrover:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/marsrover-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["marsrover"]
+}
