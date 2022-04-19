@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "marsrover-front",
+            "prefix": "mr",
             "style": "kebab-case"
           }
         ]
