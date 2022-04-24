@@ -1,22 +1,20 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
-import { RoverComponent } from './rover.component';
 import { MapComponent } from "../map/map.component";
+import { RoverDirective } from "./rover.directive";
 
 export default {
-  title: 'RoverComponent',
-  component: RoverComponent,
+  component: MapComponent,
   decorators: [
     moduleMetadata({
       imports: [],
-      declarations: [MapComponent, RoverComponent]
+      declarations: [MapComponent, RoverDirective]
     })
   ],
-} as Meta<RoverComponent>;
+} as Meta<MapComponent>;
 
-const Template: Story<RoverComponent> = (args: RoverComponent) => ({
+const Template: Story<MapComponent> = (args: MapComponent) => ({
   props: args,
   template: `<mr-map><mr-rover></mr-rover></mr-map>`
-
 });
 
 

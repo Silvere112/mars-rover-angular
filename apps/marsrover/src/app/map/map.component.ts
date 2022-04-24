@@ -1,5 +1,5 @@
 import { Component, ContentChild, ElementRef, ViewChild } from '@angular/core';
-import { MarsComponent } from "./mars.interface";
+import { MarsElement } from "./mars.interface";
 
 @Component({
   selector: 'mr-map',
@@ -10,8 +10,8 @@ export class MapComponent {
   @ViewChild('rendererCanvas', {static: true})
   rendererCanvas!: ElementRef<HTMLCanvasElement>;
 
-  @ContentChild(MarsComponent)
-  set rover(value: MarsComponent) {
+  @ContentChild(MarsElement)
+  set rover(value: MarsElement) {
     value.render(this.rendererCanvas)
   }
 

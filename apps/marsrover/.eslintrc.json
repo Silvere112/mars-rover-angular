@@ -12,8 +12,7 @@
         "@angular-eslint/directive-selector": [
           "error",
           {
-            "type": "attribute",
-            "prefix": "marsroverFront",
+            "prefix": "mr",
             "style": "camelCase"
           }
         ],

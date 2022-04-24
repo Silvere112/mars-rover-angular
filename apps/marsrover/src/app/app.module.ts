@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
-import { RoverComponent } from './rover/rover.component';
+import { RoverDirective } from "./rover/rover.directive";
 
 @NgModule({
-  declarations: [AppComponent, MapComponent, RoverComponent],
+  declarations: [AppComponent, MapComponent, RoverDirective],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],

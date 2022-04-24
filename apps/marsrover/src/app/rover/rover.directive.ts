@@ -1,18 +1,17 @@
-import { Component, ElementRef, forwardRef } from '@angular/core';
-import { MarsComponent } from "../map/mars.interface";
+import { Directive, ElementRef, forwardRef } from '@angular/core';
+import { MarsElement } from "../map/mars.interface";
 
-@Component({
+@Directive({
   selector: 'mr-rover',
-  templateUrl: './rover.component.html',
-  styleUrls: ['./rover.component.scss'],
   providers: [
     {
-      provide: MarsComponent,
-      useExisting: forwardRef(() => RoverComponent)
+      provide: MarsElement,
+      useExisting: forwardRef(() => RoverDirective)
     }
   ]
 })
-export class RoverComponent implements MarsComponent {
+export class RoverDirective implements MarsElement {
+
   render(rendererCanvas: ElementRef<HTMLCanvasElement>): void {
     const context = rendererCanvas.nativeElement.getContext('2d') as CanvasRenderingContext2D;
     const centerX = rendererCanvas.nativeElement.width / 2;
