@@ -8,7 +8,9 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "storybook": "nx run marsrover:storybook"
+    "storybook": "nx run marsrover:storybook",
+    "build-storybook": "nx run marsrover:build-storybook",
+    "chromatic": "npx chromatic --project-token 0f6e2b940bd3"
   },
   "private": true,
   "dependencies": {
