@@ -12,8 +12,7 @@ import { MarsElement } from "../map/mars.interface";
 })
 export class RoverDirective implements MarsElement {
 
-  render(rendererCanvas: ElementRef<HTMLCanvasElement>): void {
-    const context = rendererCanvas.nativeElement.getContext('2d') as CanvasRenderingContext2D;
+  render(context: CanvasRenderingContext2D): void {
 
     const base = new Image();
     base.src = "assets/Hull_01.png";
